@@ -1,31 +1,37 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <v-app id="inspire">
+    <!-- <app-drawer></app-drawer> -->
+    <app-toolbar></app-toolbar>
+    <v-content class="grey lighten-2">
+      <div class="page-wrapper" style="height:calc(100% - 50px)">
+        <router-view></router-view>
+      </div>
+      <!-- App Footer -->
+      <v-footer height="auto" class="white pa-3 app--footer">
+        <span class="caption"
+          >USpy.biz &copy; {{ new Date().getFullYear() }}</span
+        >
+        <v-spacer></v-spacer>
+        <span class="caption mr-1">Make With Love</span>
+        <v-icon color="pink" small>favorite</v-icon>
+      </v-footer>
+    </v-content>
+    <app-fab></app-fab>
+  </v-app>
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
+<script>
+import AppToolbar from "@/components/AppToolbar";
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-</style>
+export default {
+  name: "App",
+  components: {
+    AppToolbar
+  },
+  data() {
+    return {
+      //
+    };
+  }
+};
+</script>

@@ -1,5 +1,5 @@
 <template>
-  <v-toolbar dark color="primary">
+  <!-- <v-toolbar dark color="primary">
     <v-toolbar-side-icon></v-toolbar-side-icon>
 
     <v-toolbar-title class="white--text">Title</v-toolbar-title>
@@ -21,6 +21,14 @@
     <v-btn icon>
       <v-icon>more_vert</v-icon>
     </v-btn>
+  </v-toolbar> -->
+  <v-toolbar
+      app
+      :fixed="true"
+      :clipped-left="true"
+    >
+      <v-toolbar-side-icon></v-toolbar-side-icon>
+      <v-toolbar-title>Vuetify Drawer Example</v-toolbar-title>
   </v-toolbar>
 </template>
 

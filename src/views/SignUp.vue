@@ -77,14 +77,15 @@ import { mapActions, mapGetters } from 'vuex'
 import axios from 'axios'
 
 export default {
-  data: () => ({
+  data() {
+    return {
     show1: false,
     items: [{ title: 'Nam' }, { title: 'Nữ' }],
     checkbox_men: false,
     checkbox_women: false,
     checkbox_kt: true,
     checkbox_ct: false
-  }),
+  }},
   methods: {
     onCheckBoxMen() {
       if (this.checkbox_men) {

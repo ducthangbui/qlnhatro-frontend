@@ -1,5 +1,5 @@
 <template>
-  <v-app id="login" class="primary">
+  <v-app id="signup" class="primary">
     <v-content>
       <v-container fluid fill-height>
         <v-layout align-center justify-center>
@@ -8,7 +8,7 @@
               <v-card-text>
                 <div class="layout column align-center">
                   <img
-                    src="/img/icons/icon-color.svg"
+                    src="../assets/logo.svg"
                     alt="Welcom to uSpy"
                     width="120"
                     height="120"

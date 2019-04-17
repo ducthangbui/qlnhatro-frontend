@@ -28,7 +28,11 @@
               <v-container fluid>
                 <v-layout row wrap align-center>
                   <v-flex xs6>
-                    <v-subheader>Địa chỉ</v-subheader>
+                    <v-card-text>
+                      <div class="layout column align-center">
+                        <h2 class="flex my-4">Địa chỉ</h2>
+                      </div>
+                    </v-card-text>
                   </v-flex>
                   <v-flex xs6>
                     <v-select

@@ -32,8 +32,11 @@ export default {
   },
   data() {
     return {
-      //
+      
     };
+  },
+  creadted() {
+    console.log(this.$route.path)
   }
 };
 </script>

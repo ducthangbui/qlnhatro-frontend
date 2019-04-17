@@ -62,6 +62,16 @@
 import axios from "axios";
 
 export default {
+  data() {
+    return {
+      dialog: false
+    };
+  },
+  created() {
+    if (localStorage.getItem("token") !== null) {
+      this.$router.push("/");
+    }
+  },
   methods: {
     login() {
       let that = this;
@@ -76,6 +86,8 @@ export default {
           console.log(response.data.token);
           console.log(response.status);
           if (response.status == 200) {
+            localStorage.setItem("token", response.data.token);
+            // localStorage.setItem("user", response.data.user.name);
             that.$router.push("/");
           } else {
             that.dialog = true;

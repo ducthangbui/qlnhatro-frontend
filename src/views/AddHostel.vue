@@ -25,7 +25,12 @@
                       v-model="e1"
                       :items="states"
                       label="Địa chỉ"
-                      prepend-icon="map"
+              ></v-select>
+              <v-select
+                      v-model="e1"
+                      :items="states"
+                      label="Khu"
+                      multiple="true"
               ></v-select>
               <v-radio-group v-model="row" row>
                 <v-radio label="Chung chủ" value="1"></v-radio>

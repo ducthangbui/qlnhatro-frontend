@@ -6,7 +6,7 @@
             <v-card class="elevation-1 pa-3">
               <v-card-text>
                 <div class="layout column align-center">
-                  <h2 class="flex my-4 primary--text">Thêm nhà trọ</h2>
+                  <h2 class="flex my-4 primary--text">Thêm Nhà Trọ</h2>
                 </div>
               </v-card-text>
               <v-flex xs12 class="text-xs-center text-sm-center text-md-center text-lg-center">

@@ -22,11 +22,13 @@
 
 <script>
 import AppToolbar from "@/components/AppToolbar";
+import AppDrawer from "@/components/AppDrawer";
 
 export default {
   name: "App",
   components: {
-    AppToolbar
+    AppToolbar,
+    AppDrawer
   },
   data() {
     return {

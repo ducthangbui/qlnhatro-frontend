@@ -22,13 +22,18 @@
                 >
                 </v-text-field>
               </v-flex>
-              <v-btn dark block color="indigo" @click="login()">
+              
+              <v-card-actions>
+                <v-btn dark block color="indigo" @click="login()">
                 Thêm
-                <v-icon right>fa fa-facebook-square fa-lg</v-icon>
-              </v-btn>
-              <v-card-actions> </v-card-actions>
+                </v-btn>
+                <v-btn dark block color="red" @click="login()">
+                Hủy
+                </v-btn>
+              </v-card-actions>
             </v-card>
           </v-flex>
+
           <v-dialog v-model="dialog" max-width="290">
             <v-card>
               <v-card-title class="headline">Thông báo</v-card-title>

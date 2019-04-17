@@ -2,18 +2,15 @@
   <v-layout>
     <v-flex>
       <v-card>
-        <v-img
-          src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-          height="200px"
-        >
-        </v-img>
-
-        <v-card-title primary-title>
-          <div>
-            <div class="headline">Top western road trips</div>
-            <span class="grey--text">1,000 miles of wonder</span>
-          </div>
-        </v-card-title>
+        <v-flex>
+          <v-text-field label="Regular"></v-text-field>
+        </v-flex>
+        <v-flex>
+          <v-text-field label="Regular"></v-text-field>
+        </v-flex>
+        <v-flex>
+          <v-text-field label="Regular"></v-text-field>
+        </v-flex>
 
         <v-card-actions>
           <v-btn flat>Share</v-btn>

@@ -77,12 +77,6 @@ import { mapActions, mapGetters } from 'vuex'
 import axios from 'axios'
 
 export default {
-  props: {
-    provider: {
-      default: null
-    }
-  },
-
   data: () => ({
     show1: false,
     items: [{ title: 'Nam' }, { title: 'Nữ' }],
@@ -91,21 +85,6 @@ export default {
     checkbox_kt: true,
     checkbox_ct: false
   }),
-
-  mounted() {
-    if (this.provider) {
-      this.connect({ provider: this.provider, query: this.$route.query })
-        .then(() => this.$router.push('/'))
-        .catch(err => console.log(err))
-    }
-  },
-
-  computed: {
-    ...mapGetters({
-      status: 'auth/authStatus'
-    })
-  },
-
   methods: {
     onCheckBoxMen() {
       if (this.checkbox_men) {
@@ -157,11 +136,7 @@ export default {
         })
         .then(response => console.log(response))
         .catch(error => console.log(error))
-    },
-
-    ...mapActions({
-      connect: 'auth/connect'
-    })
+    }
   }
 }
 </script>

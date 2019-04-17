@@ -24,11 +24,8 @@
               <v-select
                       v-model="e1"
                       :items="states"
-                      menu-props="auto"
                       label="Địa chỉ"
-                      hide-details
                       prepend-icon="map"
-                      single-line
               ></v-select>
               <v-radio-group v-model="row" row>
                 <v-radio label="Chung chủ" value="1"></v-radio>

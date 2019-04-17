@@ -1,6 +1,6 @@
 <template>
   <v-content>
-      <v-container>
+      <!-- <v-container> -->
         <v-layout>
           <v-flex>
             <v-card class="elevation-1 pa-3">
@@ -46,6 +46,6 @@
             </v-card>
           </v-dialog>
         </v-layout>
-      </v-container>
+      <!-- </v-container> -->
     </v-content>
 </template>

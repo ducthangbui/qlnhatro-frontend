@@ -17,6 +17,14 @@ export default new Router({
       }
     },
     {
+      path: "/signup",
+      name: "signup",
+      component: SignUp,
+      meta: {
+        public: true
+      }
+    },
+    {
       path: "/",
       name: "home",
       meta: {},

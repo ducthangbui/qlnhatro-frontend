@@ -1,6 +1,6 @@
 <template>
   <v-layout>
-    <v-flex>
+    <v-flex xs12>
       <v-card>
         <v-flex>
           <v-text-field label="Regular"></v-text-field>

@@ -11,7 +11,7 @@
               </v-card-text>
               <v-flex xs12 class="text-xs-center text-sm-center text-md-center text-lg-center">
                 <img :src="imageUrl" height="150" v-if="imageUrl"/>
-                <v-text-field label="Ảnh nhà trọ" @click='pickFile' v-model='imageName' prepend-icon='attach_file'></v-text-field>
+                <v-text-field label="Ảnh nhà trọ" @click='pickFile' v-model='imageName'></v-text-field>
                 <input
                   type="file"
                   style="display: none"

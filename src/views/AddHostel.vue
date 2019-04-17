@@ -129,6 +129,7 @@ export default {
         this.imageFile = ''
         this.imageUrl = ''
       }
+    }
   }
 }
 </script>

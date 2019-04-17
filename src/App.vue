@@ -1,7 +1,7 @@
 <template>
   <v-app id="inspire">
-    <app-drawer></app-drawer>
-    <app-toolbar></app-toolbar>
+    <app-drawer v-if='this.$route.path !== "/login" || this.$route.path !== "/signup"'></app-drawer>
+    <app-toolbar v-if='this.$route.path !== "/login" || this.$route.path !== "/signup"'></app-toolbar>
     <v-content class="grey lighten-2">
       <div class="page-wrapper" style="height:calc(100% - 50px)">
         <router-view></router-view>

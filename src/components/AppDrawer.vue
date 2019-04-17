@@ -5,6 +5,7 @@
       :permanent="true"
       :mini-variant="true"
       app
+      v-if="!$route.meta.public"
     >
       <v-list>
         <v-list-tile>

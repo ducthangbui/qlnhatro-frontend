@@ -26,6 +26,7 @@
       app
       :fixed="true"
       :clipped-left="true"
+      v-if="!$route.meta.public"
     >
       <v-toolbar-side-icon></v-toolbar-side-icon>
       <v-toolbar-title>Vuetify Drawer Example</v-toolbar-title>

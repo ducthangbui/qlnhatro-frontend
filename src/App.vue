@@ -1,7 +1,7 @@
 <template>
   <v-app id="inspire">
-    <app-drawer v-if='hide'></app-drawer>
-    <app-toolbar v-if='hide'></app-toolbar>
+    <app-drawer></app-drawer>
+    <app-toolbar></app-toolbar>
     <v-content class="grey lighten-2">
       <div class="page-wrapper" style="height:calc(100% - 50px)">
         <router-view></router-view>
@@ -34,12 +34,6 @@ export default {
     return {
       
     };
-  },
-  computed: {
-    hide() {
-      console.log(this.$route.name === "login" || this.$route.name === "signup")
-      return this.$route.name === "login" || this.$route.name === "signup"
-    }
   }
 };
 </script>

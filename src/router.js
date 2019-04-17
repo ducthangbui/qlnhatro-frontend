@@ -11,11 +11,15 @@ export default new Router({
     {
       path: "/login",
       name: "login",
-      component: Login
+      component: Login,
+      meta: {
+        public: true
+      }
     },
     {
       path: "/",
       name: "home",
+      meta: {},
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -25,6 +29,7 @@ export default new Router({
     {
       path: "/addhostel",
       name: "addhostel",
+      meta: {},
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.

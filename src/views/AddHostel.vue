@@ -13,16 +13,18 @@
                 <v-text-field label="Giá phòng" v-model="price"></v-text-field>
               </v-flex>
               <v-flex>
-                <v-text-field
-                  label="Mật khẩu"
-                  v-model="password"
-                  :append-icon="show1 ? 'visibility' : 'visibility_off'"
-                  :type="show1 ? 'text' : 'password'"
-                  @click:append="show1 = !show1"
-                >
-                </v-text-field>
+                <v-text-field label="Giá điện" v-model="electricprice"></v-text-field>
               </v-flex>
-              
+              <v-flex>
+                <v-text-field label="Chi phí bảo vệ" v-model="sanitationcost"></v-text-field>
+              </v-flex>
+              <v-flex>
+                <v-text-field label="Giờ đóng cửa" v-model="closedtime"></v-text-field>
+              </v-flex>
+              <v-radio-group v-model="row" row>
+                <v-radio label="Chung chủ" value="1"></v-radio>
+                <v-radio label="Không chung chủ" value="0"></v-radio>
+              </v-radio-group>
               <v-card-actions>
                 <v-btn dark block color="indigo" @click="login()">
                 Thêm
@@ -54,3 +56,13 @@
       </v-container>
     <!-- </v-content> -->
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      row: null
+    }
+  }
+  }
+</script>

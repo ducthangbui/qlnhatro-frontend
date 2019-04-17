@@ -19,7 +19,8 @@ export default new Router({
     {
       path: "/signup",
       name: "signup",
-      component: SignUp,
+      component: () =>
+      import(/* webpackChunkName: "about" */ "./views/Home.vue"),
       meta: {
         public: true
       }

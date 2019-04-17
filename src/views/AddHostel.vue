@@ -2,21 +2,15 @@
   <v-content>
       <v-container fluid fill-height>
         <v-layout align-center justify-center>
-          <v-flex xs12 sm8 md4 lg4>
+          <v-flex>
             <v-card class="elevation-1 pa-3">
               <v-card-text>
                 <div class="layout column align-center">
-                  <img
-                    src="../assets/logo.svg"
-                    alt="Welcom to uSpy"
-                    width="120"
-                    height="120"
-                  />
-                  <h2 class="flex my-4 primary--text">Đăng nhập</h2>
+                  <h2 class="flex my-4 primary--text">Thêm nhà trọ</h2>
                 </div>
               </v-card-text>
               <v-flex>
-                <v-text-field label="Email" v-model="username"></v-text-field>
+                <v-text-field label="Giá phòng" v-model="price"></v-text-field>
               </v-flex>
               <v-flex>
                 <v-text-field
@@ -29,7 +23,7 @@
                 </v-text-field>
               </v-flex>
               <v-btn dark block color="indigo" @click="login()">
-                Đăng Nhập
+                Thêm
                 <v-icon right>fa fa-facebook-square fa-lg</v-icon>
               </v-btn>
               <v-card-actions> </v-card-actions>

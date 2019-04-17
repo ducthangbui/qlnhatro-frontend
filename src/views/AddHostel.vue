@@ -1,15 +1,18 @@
 <template>
   <v-layout>
-    <v-flex xs12 sm6 offset-sm3>
+    <v-flex>
       <v-card>
-        <v-flex>
-          <v-text-field label="Regular"></v-text-field>
+        <v-flex xs6>
+          <div>Label</div>
+          <v-text-field label="Solo" solo></v-text-field>
         </v-flex>
-        <v-flex>
-          <v-text-field label="Regular"></v-text-field>
+        <v-flex xs6>
+          <div>Label</div>
+          <v-text-field label="Solo" solo></v-text-field>
         </v-flex>
-        <v-flex>
-          <v-text-field label="Regular"></v-text-field>
+        <v-flex xs6>
+          <div>Label</div>
+          <v-text-field label="Solo" solo></v-text-field>
         </v-flex>
 
         <v-card-actions>

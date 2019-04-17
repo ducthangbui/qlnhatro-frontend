@@ -37,6 +37,7 @@ export default {
   },
   computed: {
     hide() {
+      console.log(this.$route.name === "login" || this.$route.name === "signup")
       return this.$route.name === "login" || this.$route.name === "signup"
     }
   }

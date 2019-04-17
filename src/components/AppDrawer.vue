@@ -2,8 +2,8 @@
   <v-navigation-drawer fixed
     mini-variant
     app
-    mini-variant-width="64"
-    class="elevation-5">
+    clipped
+    >
     <!-- <v-divider></v-divider> -->
 
     <v-list dense class="pt-0">

@@ -43,10 +43,13 @@
                       label="Khu"
                       multiple="true"
               ></v-select>
-              <v-radio-group v-model="row" row>
-                <v-radio label="Chung chủ" value="1"></v-radio>
-                <v-radio label="Không chung chủ" value="0"></v-radio>
-              </v-radio-group>
+              <div style="display: flex; flex-direction: column; align-items: center">
+                <v-radio-group v-model="row" row>
+                  <v-radio label="Chung chủ" value="1"></v-radio>
+                  <v-radio label="Không chung chủ" value="0"></v-radio>
+                </v-radio-group>
+              </div>
+              
               
               <v-card-actions>
                 <v-btn dark block color="indigo" @click="login()">

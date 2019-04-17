@@ -30,7 +30,7 @@
                   <v-flex xs6>
                     <v-card-text>
                       <div class="layout column align-center">
-                        <h2 class="flex my-4">Địa chỉ</h2>
+                        Địa chỉ
                       </div>
                     </v-card-text>
                   </v-flex>

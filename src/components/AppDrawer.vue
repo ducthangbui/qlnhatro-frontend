@@ -33,7 +33,7 @@
 
 <script>
   export default {
-    name: "app-toolbar",
+    name: "app-drawer",
     data () {
       return {
         items: [

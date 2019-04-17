@@ -1,6 +1,6 @@
 <template>
   <v-app id="inspire">
-    <!-- <app-drawer></app-drawer> -->
+    <app-drawer></app-drawer>
     <app-toolbar></app-toolbar>
     <v-content class="grey lighten-2">
       <div class="page-wrapper" style="height:calc(100% - 50px)">

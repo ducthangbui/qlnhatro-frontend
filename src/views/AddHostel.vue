@@ -21,32 +21,20 @@
               <v-flex>
                 <v-text-field label="Giờ đóng cửa" v-model="closedtime"></v-text-field>
               </v-flex>
+              <v-select
+                      v-model="e1"
+                      :items="states"
+                      menu-props="auto"
+                      label="Địa chỉ"
+                      hide-details
+                      prepend-icon="map"
+                      single-line
+              ></v-select>
               <v-radio-group v-model="row" row>
                 <v-radio label="Chung chủ" value="1"></v-radio>
                 <v-radio label="Không chung chủ" value="0"></v-radio>
               </v-radio-group>
-              <v-container fluid>
-                <v-layout row wrap align-center>
-                  <v-flex xs6>
-                    <v-card-text>
-                      <div class="layout column align-center">
-                        Địa chỉ
-                      </div>
-                    </v-card-text>
-                  </v-flex>
-                  <v-flex xs6>
-                    <v-select
-                      v-model="e1"
-                      :items="states"
-                      menu-props="auto"
-                      label="Select"
-                      hide-details
-                      prepend-icon="map"
-                      single-line
-                    ></v-select>
-                  </v-flex>
-                </v-layout>
-              </v-container>
+              
               <v-card-actions>
                 <v-btn dark block color="indigo" @click="login()">
                 Thêm

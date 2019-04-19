@@ -66,7 +66,7 @@
               <v-card-actions> </v-card-actions>
             </v-card>
           </v-flex>
-          
+
           <v-dialog v-model="dialog" max-width="290">
             <v-card>
               <v-card-title class="headline">Thông báo</v-card-title>
@@ -147,7 +147,7 @@ export default {
       }
       console.log(roleid_var);
       axios
-        .post("http://203.162.88.120:443/api/signup", {
+        .post("http://127.0.0.1:8000/api/signup", {
           name: this.name,
           email: this.username,
           password: this.password,

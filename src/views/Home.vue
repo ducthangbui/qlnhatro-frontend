@@ -6,21 +6,24 @@
         <v-hover>
           <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 10 : 1}`">
             <v-img
-              :src="require('/srv/demo/DoAn/QLNhaTroSrc/public/upload/' + hostel.img)"
+              :src="
+                require('~/Desktop/QLNhaTroSrc/public/upload/' + hostel.img)
+              "
               aspect-ratio="1"
             >
               <div class="caption white--text black created-time">
-                  {{ moment(hostel.created_time).fromNow() }}
+                {{ moment(hostel.created_time).fromNow() }}
               </div>
             </v-img>
             <v-card-actions grid-list-xs>
-              <v-layout grid-list-xs
+              <v-layout
+                grid-list-xs
                 row
                 fill-height
                 align-center
                 justify-space-around
               >
-              <!-- <span>
+                <!-- <span>
                 <span class="caption mr-2">
                   {{ numeral(item.reactions).format('0a') }}
                 </span>
@@ -49,7 +52,7 @@
 <script>
 import axios from "axios";
 import { error } from "util";
-import moment from 'moment'
+import moment from "moment";
 
 export default {
   mounted() {
@@ -67,7 +70,7 @@ export default {
   created() {
     // let offset = 0;
     axios
-      .get("http://203.162.88.120:443/api/hostels/" + this.offset)
+      .get("http://127.0.0.1:8000/api/hostels/" + this.offset)
       .then(response => {
         this.hostels = response.data.hostels;
         console.log(this.hostels);
@@ -96,7 +99,7 @@ export default {
           // this.scrolled = window.scrollY > 0;
           this.offset = this.offset + 24;
           axios
-            .get("http://203.162.88.120:443/api/hostels/" + this.offset)
+            .get("http://127.0.0.1:8000/api/hostels/" + this.offset)
             .then(response => {
               this.hostels.push.apply(this.hostels, response.data.hostels);
               console.log(this.hostels);

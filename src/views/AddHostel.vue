@@ -230,7 +230,7 @@ export default {
       data.append("regions", region_);
       axios
         .post(
-          "http://127.0.0.1:8000/api/hostel/addHostel?token=" + token,
+          "http://203.162.88.120:443/api/hostel/addHostel?token=" + token,
           data,
           {
             "Content-Type": "multipart/form-data"

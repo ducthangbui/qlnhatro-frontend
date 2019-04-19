@@ -6,13 +6,11 @@
         <v-hover>
           <v-card slot-scope="{ hover }" :class="`elevation-${hover ? 10 : 1}`">
             <v-img
-              :src="item.full_picture"
-              @error="imgErrorHandler(index)"
-              @click="showChart(item)"
+              :src="require('/srv/demo/DoAn/QLNhaTroSrc/public/upload/' + hostel.img)"
               aspect-ratio="1"
             >
               <div class="caption white--text black created-time">
-                  {{ moment(item.created_time).fromNow() }}
+                  {{ moment(hostel.created_time).fromNow() }}
               </div>
             </v-img>
             <v-card-actions grid-list-xs>
@@ -22,14 +20,14 @@
                 align-center
                 justify-space-around
               >
-              <span>
+              <!-- <span>
                 <span class="caption mr-2">
                   {{ numeral(item.reactions).format('0a') }}
                 </span>
                 <v-icon size="12" class="mr-1" color="orange">far fa-star</v-icon>
-              </span>
+              </span> -->
               </v-layout>
-            <v-card-actions>
+            </v-card-actions>
             <v-card-title primary-title>
               <div>{{ hostel.waterprice }}</div>
             </v-card-title>
@@ -51,6 +49,7 @@
 <script>
 import axios from "axios";
 import { error } from "util";
+import moment from 'moment'
 
 export default {
   mounted() {
@@ -61,8 +60,24 @@ export default {
       hostels: [],
       offset: 0,
       scrolled: false,
-      hostelDialog: false
+      hostelDialog: false,
+      moment: moment
     };
+  },
+  created() {
+    // let offset = 0;
+    axios
+      .get("http://203.162.88.120:443/api/hostels/" + this.offset)
+      .then(response => {
+        this.hostels = response.data.hostels;
+        console.log(this.hostels);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  },
+  destroyed() {
+    window.onscroll = null;
   },
   methods: {
     handleScroll() {
@@ -81,7 +96,7 @@ export default {
           // this.scrolled = window.scrollY > 0;
           this.offset = this.offset + 24;
           axios
-            .get("http://127.0.0.1:8000/api/hostels/" + this.offset)
+            .get("http://203.162.88.120:443/api/hostels/" + this.offset)
             .then(response => {
               this.hostels.push.apply(this.hostels, response.data.hostels);
               console.log(this.hostels);
@@ -94,21 +109,6 @@ export default {
         }
       };
     }
-  },
-  created() {
-    // let offset = 0;
-    axios
-      .get("http://127.0.0.1:8000/api/hostels/" + this.offset)
-      .then(response => {
-        this.hostels = response.data.hostels;
-        console.log(this.hostels);
-      })
-      .catch(error => {
-        console.log(error);
-      });
-  },
-  destroyed() {
-    window.onscroll = null;
   }
 };
 </script>

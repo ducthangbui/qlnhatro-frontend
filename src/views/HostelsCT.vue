@@ -81,7 +81,7 @@ export default {
           // this.scrolled = window.scrollY > 0;
           this.offset = this.offset + 24;
           axios
-            .get("http://127.0.0.1:8000/api/hostels/" + this.offset)
+            .get("http://203.162.88.120:443/api/hostels/" + this.offset)
             .then(response => {
               this.hostels.push.apply(this.hostels, response.data.hostels);
               console.log(this.hostels);
@@ -98,7 +98,7 @@ export default {
   created() {
     // let offset = 0;
     axios
-      .get("http://127.0.0.1:8000/api/hostels/" + this.offset)
+      .get("http://203.162.88.120:443/api/hostels/" + this.offset)
       .then(response => {
         this.hostels = response.data.hostels;
         console.log(this.hostels);

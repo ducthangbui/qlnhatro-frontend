@@ -147,7 +147,7 @@ export default {
       }
       console.log(roleid_var);
       axios
-        .post("http://127.0.0.1:8000/api/signup", {
+        .post("http://203.162.88.120:443/api/signup", {
           name: this.name,
           email: this.username,
           password: this.password,

@@ -45,6 +45,7 @@
         <v-card-actions><v-card-actions>
       </v-card>
     <v-dialog>
+
   </v-container>
 </template>
 
@@ -112,4 +113,3 @@ export default {
   }
 };
 </script>
-

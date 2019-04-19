@@ -30,9 +30,9 @@
               </span>
               </v-layout>
             <v-card-actions>
-            <v-card-title primary-title
-              ><div>{{ hostel.waterprice }}</div></v-card-title
-            >
+            <v-card-title primary-title>
+              <div>{{ hostel.waterprice }}</div>
+            </v-card-title>
           </v-card>
         </v-hover>
       </v-flex>
@@ -41,10 +41,10 @@
     <v-dialog v-model="hostelDialog" scrollable width="90%">
       <v-card>
         <v-card-title></v-card-title>
-        <v-card-text><v-card-text>
-        <v-card-actions><v-card-actions>
+        <v-card-text></v-card-text>
+        <v-card-actions></v-card-actions>
       </v-card>
-    <v-dialog>
+    </v-dialog>
   </v-container>
 </template>
 
